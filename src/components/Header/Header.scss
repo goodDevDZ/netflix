@@ -1,0 +1,170 @@
+.header{
+    position:fixed;
+    z-index: 999;
+    top:0;
+    left:0;
+    width:100vw;
+    background:linear-gradient(to top ,transparent 30%, rgba(0, 0, 0,0.7) 70%);
+    transition:all .5s ease-out;
+
+    .icon{
+        font-size:4.5rem;
+        cursor: pointer;
+        margin-right:3rem ;
+        &--drop-down{
+            transition:all 1s ease;
+            &:hover{
+                transform:rotate(180deg)
+            }
+
+        }
+        @media screen and (max-width:750px) {
+            font-size: 2.5rem;
+            margin-right:1rem ;
+
+        }
+
+        &--menu-down{
+            display: none;
+            @media screen and (max-width:1385px) {
+                display: block;
+            }
+        }
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:2.7rem 3rem;
+        color:white;
+        @media screen and (max-width:750px) {
+            padding:2.7rem 0;
+       }
+    }
+
+    &__one{
+        display: flex;
+        align-items: center;
+        position:relative;
+        ul.small{
+            display: none;
+            align-items: center;
+            flex-direction: column;
+            background-color: black;
+            width:40vw;
+            position:absolute;
+            align-items: center;
+            left:0;
+            top:100%;
+            @media screen and (min-width:1385px){
+                display: none !important;
+            }
+            span{
+                display: block;
+                width: fit-content;
+                margin:1rem;
+                width:100%;
+                text-align: center;
+                padding:2rem 0;
+                &:hover{
+                    color:white;
+                    border-bottom: 2px solid white;
+                    background-color: rgba(255, 255, 255, 0.3);
+                    transform: translateY(-1rem);
+                }
+            }
+
+
+        }
+        ul.big{
+            display: flex;
+            align-items: center;
+            @media screen and (max-width:1385px) {
+                display: none;
+                flex-direction: column;
+                background-color: black;
+                width:30vw;
+                position:absolute;
+                align-items: center;
+                left:0;
+                top:100%;
+
+                span{
+                    display: block;
+                    width: fit-content;
+                    margin:1rem;
+                    width:100%;
+                    text-align: center;
+                    padding:2rem 0;
+                    &:hover{
+                        color:white;
+                        border-bottom: 2px solid white;
+                        background-color: rgba(255, 255, 255, 0.3);
+                        transform: translateY(-1rem);
+                    }
+                }
+
+            }
+        }
+        img {
+            width:200px;
+            margin-right:2rem;
+            @media screen and (max-width:750px) {
+                width:100px;
+            }
+        }
+        span{
+            margin-right:5rem;
+            cursor: pointer;
+            transition: .5s ease;;
+            &:hover{
+                color:rgb(177, 177, 177);
+            }
+        }
+    }
+
+    &__two{
+        display: flex;
+        align-items: center;
+    }
+    &__auth{
+
+        position:relative;
+        align-items: center;
+        display: flex;
+        gap:0.5rem;
+
+        &__img{
+            width:70px;
+            height:50px;
+            object-fit: contain;
+        }
+        &__setting{
+            .setting{
+                background-color: black;
+                display: flex;
+                flex-direction: column;
+                position:absolute;
+                left:50%;
+                transform:translateX(-50%);
+                color:white;
+                border-radius: 5px;
+                li{
+                    padding:1rem 3rem ;
+                    margin:1rem 0;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: white;
+                        color:black;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.header.active{
+    background: rgb(15, 15, 15);
+}
+

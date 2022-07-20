@@ -1,0 +1,36 @@
+.footer{
+    color:gainsboro;
+    width:100vw;
+    display: flex;
+
+    .container{
+        margin: 0 auto;
+    }
+    &__icons{
+        .icon{
+            font-size:4rem;
+            margin:1rem;
+        }
+    }
+    
+    &__sections{
+        display: flex;
+        align-items: center;
+        gap:1rem;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+    }
+    &__section{
+        width:300px;
+        &__title{
+            margin:2rem;
+            font-size: 2rem;
+            color:gray
+        }
+    }
+    &__about{
+        margin-bottom:4rem;
+        font-size: 2rem;
+        color:gray
+    }
+}

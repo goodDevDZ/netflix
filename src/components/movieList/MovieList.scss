@@ -1,0 +1,52 @@
+.movie-box{
+    position:relative;
+    margin-bottom:4rem;
+    width:100vw;
+    background-color: rgb(15, 15, 15);
+}
+
+.movie-list{
+    width:100vw;
+    color:white;
+    overflow: visible;
+    
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    .slider-icon{
+        position:absolute;
+        font-size:10rem;
+        top:0;
+        bottom: 0;
+        margin: auto 0;
+        cursor: pointer;
+        height:50%;
+        z-index: 150;
+        &:hover{
+            background-color: rgba(135, 135, 135, 0.321);
+        }
+        
+        &--next{
+            right:1rem;
+        }
+        &--prev{
+            left:0;
+        }
+    }
+
+   &__title{
+    font-size:3rem;
+    position:absolute;
+    top:-4rem;
+    left:1rem;
+    z-index: 100;
+   }
+   &__slider{
+    position: relative;
+    margin-left:100px;
+    width: max-content;
+    padding-block: 2rem;
+    transition:.5s ease;
+   }
+
+}
